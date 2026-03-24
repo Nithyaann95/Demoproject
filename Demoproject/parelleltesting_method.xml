@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="parelleltestingmethod" parallel="methods">
+  <test thread-count="5" name="Chrometest">
+  <parameter name="browser" value="Chrome"></parameter>
+    <classes>
+     <class name="testscript.LoginTest">
+     <methods>
+     <include name="verifyTheUserisAbleToLoginUsingInvalidValidusernameandPassword"></include>
+     <include name="verifyTheUserisAbleToLoginUsingInvalidusernamevalidandpassword"></include>
+     </methods>
+     </class>
+    </classes>
+  </test> <!-- Test -->
+ 
+</suite> <!-- Suite -->
